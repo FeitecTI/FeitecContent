@@ -19,16 +19,16 @@ module.exports = {
         apiURL: 'https://feitec-admin.herokuapp.com',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           'user',
-		  'ages',
-		  'asociaciones',
-		  'carreras',
-		  'consejos',
-		  'contactos',
-		  'eventos',
-		  'infovariadas',
-		  'normativas',
-		  'organofederados',
-		  'sedes'
+		  'age',
+		  'asociacion',
+		  'carrera',
+		  'consejo',
+		  'contacto',
+		  'evento',
+		  'infovariada',
+		  'normativa',
+		  'organofederado',
+		  'sede'
 		  
         ],
         queryLimit: 1000,
