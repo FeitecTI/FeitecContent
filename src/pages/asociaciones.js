@@ -11,8 +11,8 @@ function Asociaciones({data}) {
     <Layout>
       <SEO title="Feitec" />
       <ul>
-        {data.allStrapiAsociacion.edges.map((document, i) => (
-            <Asociacion path = "/" nombre = {document.node.nombre} key= {i}/>
+        {data.allStrapiAsociacion.edges.map((document, index) => (
+            <Asociacion datos = {document.node} key= {index}/>
         ))}
       </ul>
       <Link to="/page-2/">Go to page 2</Link>
