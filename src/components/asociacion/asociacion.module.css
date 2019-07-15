@@ -1,0 +1,13 @@
+.head {
+    margin: 1rem;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 1rem;
+    max-width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 2rem;
+    border-radius: 0.3rem;
+}

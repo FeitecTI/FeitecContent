@@ -1,21 +1,9 @@
-import React , {Fragment}from "react"
-import { Link } from "gatsby"
+import React from "react"
+import styles from "./asociacion.module.css"
+import { Link } from "gatsby";
 
-const Asociacion = ({data}) => (
-  <Fragment>
-    <h2>
-       <Link to={`/${data.strapiAsociacion.id}`}>{data.strapiAsociacion.nombre}</Link>
-    </h2>
-  </Fragment>
+const Asociacion = ({nombre, path}) => (
+  <Link to={path} className = {styles.head}>{nombre}</Link>
 )
 
-export default Asociacion
-
-export const query = graphql`
-  query AsociacionTemplate($id: String!) {
-    strapiAsociacion(id: {eq: $id}) {
-      id
-      nombre
-    }
-  }
-`
+export default Asociacion;
