@@ -1,21 +1,16 @@
-import React , {Fragment}from "react"
+import React from "react"
+import styles from "./asociacion.module.css"
 import { Link } from "gatsby"
+import icon from "../../images/gatsby-icon.png"
 
-const Asociacion = ({data}) => (
-  <Fragment>
-    <h2>
-       <Link to={`/${data.strapiAsociacion.id}`}>{data.strapiAsociacion.nombre}</Link>
-    </h2>
-  </Fragment>
-)
+const Asociacion = ({datos}) => {
+  //<Img fixed= {query}/>
+  return(
+    <Link to={datos.path ? datos.path : "/"} className = {styles.head}>
+      <img src = {icon} alt = "Icon" className={styles.img} />
+      {datos.nombre}
+    </Link>
+  )
+}
 
-export default Asociacion
-
-export const query = graphql`
-  query AsociacionTemplate($id: String!) {
-    strapiAsociacion(id: {eq: $id}) {
-      id
-      nombre
-    }
-  }
-`
+export default Asociacion;
