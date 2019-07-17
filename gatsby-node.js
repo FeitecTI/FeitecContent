@@ -51,5 +51,5 @@ exports.createPages = ({ actions, graphql }) => {
     });
     
     // Query for articles nodes to use in creating pages.
-    return getArticles;
+    return getAsociaciones;
   };
