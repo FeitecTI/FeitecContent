@@ -10,8 +10,8 @@ import {
   DropdownToggle,
   Collapse
 } from "reactstrap"
-import { HEADER, MAIN_COLOR } from "../config/consts"
-import pathInfo from "../config/pathInfo"
+import { HEADER, MAIN_COLOR } from "../../config/consts"
+import pathInfo from "../../config/pathInfo"
 
 const Item = ({path, text}) => (
   <Link to= {path} className = "nav-link text-dark">

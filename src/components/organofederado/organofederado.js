@@ -1,7 +1,7 @@
-import React , {Fragment}from "react"
-import Layout from "../layout";
+import React from "react"
+import Layout from "../layout/layout";
 import { graphql } from "gatsby"
-import { Card, CardImg, CardHeader, Col, Row, CardBody, CardFooter } from "reactstrap"
+import { Card, CardHeader, CardBody } from "reactstrap"
 
 const OrganoFederado = ({data}) => {
   var organo = data.strapiOrganofederado;
