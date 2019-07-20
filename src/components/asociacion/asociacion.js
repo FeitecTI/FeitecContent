@@ -1,6 +1,7 @@
 import React from "react"
 import icon from "../../images/gatsby-icon.png"
-import Layout from "../layout";
+import { graphql } from "gatsby"
+import Layout from "../layout/layout";
 import SEO from "../seo";
 import { Card, CardImg, CardHeader, Col, Row, CardBody, CardFooter } from "reactstrap"
 

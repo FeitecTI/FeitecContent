@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 
 function Asociaciones({data}) {
@@ -25,7 +25,7 @@ export default Asociaciones
 
 
 export const asoQuery = graphql`  
-  query IndexQuery {
+  query AsociacionesQuery {
     allStrapiAsociacion {
       edges {
         node {

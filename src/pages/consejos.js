@@ -1,38 +1,37 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 //import DeleteList from "../components/deleteList"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Feitec" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
+const Consejos = ({data}) => {
+  return(
+    <Layout>
+      <SEO title="Feitec" />
+      <ul>
+        {data.allStrapiConsejo.edges.map(document => (
+          <li key={document.node.id}>
+            <Link to = {`/${document.node.id}`}>{document.node.nombre}</Link>
+          </li>
+        ))}
+      </ul>
+      <Link to="/page-2/">Go to page 2</Link>
+    </Layout>
+  )
+}
+export default Consejos
 
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
 
-export default IndexPage
-
-/*
 export const pageQuery = graphql`  
-  query IndexQuery {
-    allStrapiDeletearticle {
+  query ConsejosQuery {
+    allStrapiConsejo {
       edges {
         node {
           id
-          tittle
-          content
+          nombre
         }
       }
     }
   }
-`*/
+`
