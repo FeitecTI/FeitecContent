@@ -1,7 +1,7 @@
-import React , {Fragment}from "react"
+import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../layout";
-import { Card, CardImg, CardHeader, Col, Row, CardBody, CardFooter } from "reactstrap"
+import Layout from "../layout/layout";
+import { Card, CardHeader, CardBody } from "reactstrap"
 
 const Consejo = ({data}) => {
   var consejo = data.strapiConsejo;
