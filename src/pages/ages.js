@@ -6,33 +6,34 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 //import DeleteList from "../components/deleteList"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Feitec" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
+function Ages({data}) {
+  return(
+    <Layout>
+      <SEO title="Feitec" />
+      <ul>
+        {data.allStrapiAge.edges.map(document => (
+          <li key={document.node.id}>
+            <Link to = {`/${document.node.id}`}>{document.node.nombre}</Link>
+          </li>
+        ))}
+      </ul>
+      <Link to="/page-2/">Go to page 2</Link>
+    </Layout>
+  )
+}
 
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+export default Ages
 
-export default IndexPage
 
-/*
 export const pageQuery = graphql`  
   query IndexQuery {
-    allStrapiDeletearticle {
+    allStrapiAge {
       edges {
         node {
           id
-          tittle
-          content
+          nombre
         }
       }
     }
   }
-`*/
+`

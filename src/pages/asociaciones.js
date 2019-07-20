@@ -25,7 +25,7 @@ export default Asociaciones
 
 
 export const asoQuery = graphql`  
-  query IndexQuery {
+  query AsociacionesQuery {
     allStrapiAsociacion {
       edges {
         node {

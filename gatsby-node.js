@@ -51,7 +51,14 @@ exports.createPages = ({ actions, graphql }) => {
 				id
 			  }
 			}
-		  }
+      }
+      allStrapiAge {
+        edges {
+          node {
+            id
+          }
+      }
+      }
 		}
       `).then(result => {
       // Create pages for each asociation
@@ -64,31 +71,46 @@ exports.createPages = ({ actions, graphql }) => {
           },
         })
       })
-	});
-	
-	// Create pages for each organo federado
-      result.data.allStrapiOrganofederado.edges.forEach(({ node }) => {
+
+
+      	// Create pages for each organo federado
+        result.data.allStrapiOrganofederado.edges.forEach(({ node }) => {
+          createPage({
+            path: `/${node.id}`,
+            component: path.resolve(`src/components/organofederado/organofederado.js`),
+            context: {
+              id: node.id,
+            },
+          })
+        })
+  
+    // Create pages for each consejo
+        result.data.allStrapiConsejo.edges.forEach(({ node }) => {
+          createPage({
+            path: `/${node.id}`,
+            component: path.resolve(`src/components/consejo/consejo.js`),
+            context: {
+              id: node.id,
+            },
+          })
+      })
+
+      // Create pages for each consejo
+      result.data.allStrapiAge.edges.forEach(({ node }) => {
         createPage({
           path: `/${node.id}`,
-          component: path.resolve(`src/components/asociacion/asociacion.js`),
+          component: path.resolve(`src/components/age/age.js`),
           context: {
             id: node.id,
           },
         })
-      })
+    })
+
+  
+
 	});
 	
-	// Create pages for each consejo
-      result.data.allStrapiAsociacion.edges.forEach(({ node }) => {
-        createPage({
-          path: `/${node.id}`,
-          component: path.resolve(`src/components/asociacion/asociacion.js`),
-          context: {
-            id: node.id,
-          },
-        })
-      })
-	});
+
     
     // Query for articles nodes to use in creating pages.
     return getAsociaciones;
