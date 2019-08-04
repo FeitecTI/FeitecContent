@@ -28,7 +28,8 @@ module.exports = {
 		  'infovariada',
 		  'normativa',
 		  'organofederado',
-		  'sede'
+      'sede',
+      'eventohistorico'
 		  
         ],
         queryLimit: 1000,
