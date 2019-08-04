@@ -1,6 +1,6 @@
 import React from "react"
 import "./eventohistorico.css"
-import { Card, CardImg, CardHeader, Col, Row, CardBody, CardFooter,Container,Media } from "reactstrap"
+import {Media } from "reactstrap"
 
 const EventoHistortico = ({evento}) => {
   return (
