@@ -1,36 +1,57 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
+import Contenedor from "../components/Items/asociaciones/contenedor"
 
-function Asociaciones({data}) {
-  return(
+//<Img fluid={data.logo.childImageSharp} alt="" />
+function Asociaciones({ data }) {
+  return (
     <Layout>
       <SEO title="Feitec" />
-      <ul>
-        {data.allStrapiAsociacion.edges.map(document => (
-          <li key={document.node.id}>
-            <Link to = {`/${document.node.id}`}>{document.node.nombre}</Link>
-          </li>
+      <div className="row">
+        {data.allStrapiAsociacion.edges.map((document, index) => (
+          <div
+            className="col-11 col-md-4 my-3 shadow container mx-auto d-flex"
+            key={index}
+          >
+            <Contenedor
+              data={{
+                id: document.node.id,
+                src: document.node.logo.childImageSharp.fluid.src,
+                acronimo: document.node.acronimo,
+                nombre: document.node.nombre,
+                sede: document.node.sede.nombre,
+              }}
+            ></Contenedor>
+          </div>
         ))}
-      </ul>
+      </div>
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   )
 }
 
-
 export default Asociaciones
 
-
-export const asoQuery = graphql`  
+export const asoQuery = graphql`
   query AsociacionesQuery {
     allStrapiAsociacion {
       edges {
         node {
-          nombre
           id
+          nombre
+          acronimo
+          logo {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
+          sede {
+            nombre
+          }
         }
       }
     }
