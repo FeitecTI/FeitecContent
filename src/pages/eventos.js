@@ -12,7 +12,7 @@ class Eventos extends React.Component {
     this.showMore = this.showMore.bind(this)
     this.state = {
       eventos: [],
-      limit: 1,
+      limit: 5,
     }
   }
 
