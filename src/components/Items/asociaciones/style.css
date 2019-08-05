@@ -39,8 +39,27 @@ a:active {
   background-color: "#651651";
 }
 
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .imagen:hover {
-  opacity: 0.7;
+  opacity: 1;
+  -webkit-animation: flash 1s;
+  animation: flash 1s;
 }
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.2);

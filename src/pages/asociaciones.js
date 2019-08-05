@@ -4,7 +4,6 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Contenedor from "../components/Items/asociaciones/contenedor"
 
-//<Img fluid={data.logo.childImageSharp} alt="" />
 function Asociaciones({ data }) {
   return (
     <Layout>
