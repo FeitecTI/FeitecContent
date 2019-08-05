@@ -2,6 +2,7 @@ import React from "react"
 import Styles from "./info.module.css"
 import Titulo from "./titulo"
 import Description from "./descripcion"
+import DropdownController from "../../toggle/dropdownController"
 
 const Info = ({ nombre, desc, onClick }) => (
   <div
@@ -10,9 +11,7 @@ const Info = ({ nombre, desc, onClick }) => (
   >
     <Titulo nombre={nombre} />
     <Description desc={desc} />
-    <div onClick={onClick} className={Styles.controller}>
-      +
-    </div>
+    <DropdownController isOpen onClick={onClick} />
   </div>
 )
 

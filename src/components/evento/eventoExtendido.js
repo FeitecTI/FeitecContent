@@ -5,6 +5,7 @@ import Descripcion from "./descripcion"
 import Info from "./info"
 import Organizador from "./organizador"
 import { CSSTransition } from "react-transition-group"
+import DropdownController from "../toggle/dropdownController"
 
 class EventoExtendido extends React.Component {
   render() {
@@ -29,6 +30,7 @@ class EventoExtendido extends React.Component {
             />
             <Descripcion text={this.props.data.descripcion} />
             <Organizador text={this.props.data.carreras[0].nombre} />
+            <DropdownController onClick={this.props.onClick} />
           </div>
         </CSSTransition>
       </div>
