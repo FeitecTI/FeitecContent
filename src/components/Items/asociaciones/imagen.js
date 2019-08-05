@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { CardImg } from "reactstrap"
 
 const Imagen = ({ data }) => {

@@ -6,7 +6,6 @@ import Item from "../components/Items/normativas/contenedor"
 
 //<Img fluid={data.logo.childImageSharp} alt="" />
 function Normativas({ data }) {
-  console.log(data)
   return (
     <Layout>
       <SEO title="Feitec" />
@@ -22,6 +21,7 @@ function Normativas({ data }) {
                 descripcion: document.node.Descripcion,
                 link: document.node.Link,
                 id: document.node.id,
+                fecha: document.node.Fecha_Publicacion,
               }}
             />
           </div>
@@ -42,6 +42,7 @@ export const normativasQuery = graphql`
           Nombre
           Descripcion
           Link
+          Fecha_Publicacion(formatString: "DD/MM/YYYY")
         }
       }
     }

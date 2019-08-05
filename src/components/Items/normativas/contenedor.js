@@ -11,7 +11,6 @@ import { FaDownload } from "react-icons/fa"
 import "./style.css"
 
 const Contenedor = ({ data }) => {
-  console.log(data.link)
   return (
     <div className="container">
       <Row>
@@ -29,7 +28,7 @@ const Contenedor = ({ data }) => {
         </div>
         <div className="icon">
           <h4>
-            <a href={data.link} target="_blank">
+            <a href={data.link} target="_blank" rel="noopener noreferrer">
               <FaDownload className="download-icon" />
             </a>
           </h4>
