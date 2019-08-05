@@ -19,7 +19,10 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "reactstrap": "^8.0.1"
+    "react-icons": "^3.7.0",
+    "react-transition-group": "^4.2.2",
+    "reactstrap": "^8.0.1",
+    "strapi-sdk-javascript": "^0.3.1"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
