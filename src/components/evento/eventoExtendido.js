@@ -36,36 +36,6 @@ class EventoExtendido extends React.Component {
       <></>
     )
   }
-} /*
-const eventoExtendido = ({ data, onClick, status }) => {
-  return status ? (
-    <TransitionGroup className={Styles.rect}>
-      <CSSTransition
-        key={data.id}
-        timeout={500}
-        appear
-        in={status}
-        classNames="fade"
-      >
-        {status ? (
-          <div>
-            <Titulo text={data.nombre} onClick={onClick} />
-            <Info
-              ubicacion={data.ubicacion}
-              fecha={data.fecha}
-              sede={data.sedes[0].nombre}
-            />
-            <Descripcion text={data.descripcion} />
-            <Organizador text={data.carreras[0].nombre} />
-          </div>
-        ) : (
-          <></>
-        )}
-      </CSSTransition>
-    </TransitionGroup>
-  ) : (
-    <> </>
-  )
-}*/
+}
 
 export default EventoExtendido

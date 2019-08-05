@@ -41,8 +41,6 @@ class Eventos extends React.Component {
   }
 
   render() {
-    console.log(this.state)
-
     return (
       <Layout>
         {this.state.eventos.map((doc, index) => {

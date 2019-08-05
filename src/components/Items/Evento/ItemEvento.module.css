@@ -4,45 +4,13 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.controller {
-  cursor: pointer;
-  float: right;
-}
-
-.side {
-  min-height: 100%;
-  width: 50%;
-  margin: 0;
-}
-
-.textBox {
-  width: 95%;
-  min-height: 100%;
-  margin: 0 auto;
-  font-size: 100%;
-}
-
-.title {
-  margin-left: 5%;
-  width: 95%;
-  text-align: center;
-  font-weight: bold;
-  border-style: solid;
-  border-width: 0 0 0.1rem 0;
-  border-color: #c5c5c5;
-}
-
-.desc {
-  width: 95%;
-  font-size: 85%;
-  max-height: 95%;
-  margin-left: 5%;
-  margin-top: 5%;
-  white-space: pre-line;
-}
-
 .bar {
   max-width: 3px;
   min-height: 90%;
   background-color: #c5c5c5;
+}
+.side {
+  min-height: 100%;
+  width: 50%;
+  margin: 0;
 }

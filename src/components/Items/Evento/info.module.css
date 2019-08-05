@@ -1,0 +1,16 @@
+.controller {
+  cursor: pointer;
+  float: right;
+}
+
+.textBox {
+  width: 95%;
+  min-height: 100%;
+  margin: 0 auto;
+  font-size: 100%;
+}
+.side {
+  min-height: 100%;
+  width: 50%;
+  margin: 0;
+}
