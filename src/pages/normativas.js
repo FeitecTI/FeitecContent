@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Item from "../components/Items/normativas/contenedor"
@@ -11,18 +11,22 @@ function Normativas({ data }) {
     <Layout>
       <SEO title="Feitec" />
       <div className="row">
-        {data.allStrapiNormativa.edges.map(document => (
-          <Item
-            data={{
-              titulo: document.node.Nombre,
-              descripcion: document.node.Descripcion,
-              link: document.node.Link,
-              id: document.node.id,
-            }}
-          />
+        {data.allStrapiNormativa.edges.map((document, index) => (
+          <div
+            className="col-11 col-md-6 my-3 shadow container mx-auto d-flex"
+            key={index}
+          >
+            <Item
+              data={{
+                titulo: document.node.Nombre,
+                descripcion: document.node.Descripcion,
+                link: document.node.Link,
+                id: document.node.id,
+              }}
+            />
+          </div>
         ))}
       </div>
-      <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   )
 }

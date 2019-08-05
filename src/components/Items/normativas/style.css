@@ -1,25 +1,27 @@
 .shadow {
-  margin-top: 2rem;
-  margin-bottom: 0;
-  width: 48%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
+
 .titulo {
   font-size: 100%;
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  margin-top: 1rem;
   color: rgb(0, 0, 0);
+  text-align: center;
+  margin-left: 1rem;
 }
 
 .texto {
   font-size: 85%;
   font-weight: normal;
+  margin-left: 1rem;
 }
 
 .icon {
   float: right;
-  margin-left: 12.5rem;
+  margin-left: 10rem;
 }
 .download-icon {
   font-size: 1.5rem;

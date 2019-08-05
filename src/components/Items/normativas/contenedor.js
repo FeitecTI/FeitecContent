@@ -20,17 +20,16 @@ const Contenedor = ({ data }) => {
       <Row lg="2">
         <Descripcion data={{ descripcion: data.descripcion }} />
       </Row>
-      <div class="row">
-        <div class="col-xs">
-          <h5 style={{ marginBottom: 0 }}>Fecha de Publicación</h5>
+      <div className="row">
+        <div className="col-xs">
+          <h5 style={{ marginBottom: 0, marginLeft: "1rem" }}>
+            Fecha de Publicación
+          </h5>
           <Fecha data={{ fecha: data.fecha }} />
         </div>
-        <div class="icon">
+        <div className="icon">
           <h4>
-            <a
-              href="https://reactjs.org/docs/lists-and-keys.html#keys"
-              target="_blank"
-            >
+            <a href={data.link} target="_blank">
               <FaDownload className="download-icon" />
             </a>
           </h4>
