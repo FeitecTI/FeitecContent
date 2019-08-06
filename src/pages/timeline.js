@@ -5,7 +5,7 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 
 import EventoHistorico from "../components/eventohistorico/eventohistorico"
-import { Card, CardImg, CardHeader, Col, Row, CardBody, CardFooter,Container,Media } from "reactstrap"
+import { Col, Row, Container } from "reactstrap"
 //import DeleteList from "../components/deleteList"
 
 
