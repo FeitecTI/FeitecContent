@@ -1,10 +1,14 @@
 import React from "react"
-import Styles from "./preview.module.css"
+import { Media } from "reactstrap"
 
-const Preview = ({ text }) => (
-  <div className={Styles.side} style={{ float: "left" }}>
-    {text}
-  </div>
-)
+const Preview = ({ img }) => {
+  return (
+    <Media
+      src={img ? img.url : ""}
+      alt="Vista previa de evento"
+      style={{ margin: 0 }}
+    />
+  )
+}
 
 export default Preview

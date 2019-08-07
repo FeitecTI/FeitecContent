@@ -1,7 +1,12 @@
 .container {
   margin-top: 1rem;
-  height: 9rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  min-height: 8.5rem !important;
+  padding: 0 !important;
 }
 
 .bar {

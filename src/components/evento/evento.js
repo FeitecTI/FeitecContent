@@ -27,6 +27,7 @@ class Evento extends React.Component {
           data={this.props.data}
           onClick={this.toggle}
           status={this.state.open}
+          images={this.props.data.imagenes}
         />
       </>
     )

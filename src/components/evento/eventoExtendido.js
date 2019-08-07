@@ -6,6 +6,7 @@ import Info from "./info"
 import Organizador from "./organizador"
 import { CSSTransition } from "react-transition-group"
 import DropdownController from "../toggle/dropdownController"
+import ImageGroup from "../imagenes/group/imageGroup"
 
 class EventoExtendido extends React.Component {
   render() {
@@ -23,6 +24,7 @@ class EventoExtendido extends React.Component {
               text={this.props.data.nombre}
               onClick={this.props.onClick}
             />
+            <ImageGroup images={this.props.images} />
             <Info
               ubicacion={this.props.data.ubicacion}
               fecha={this.props.data.fecha}
@@ -30,7 +32,15 @@ class EventoExtendido extends React.Component {
             />
             <Descripcion text={this.props.data.descripcion} />
             <Organizador text={this.props.data.carreras[0].nombre} />
-            <DropdownController onClick={this.props.onClick} />
+            <DropdownController
+              onClick={this.props.onClick}
+              style={{
+                position: "absolute",
+                margin: "1rem",
+                bottom: 0,
+                right: 0,
+              }}
+            />
           </div>
         </CSSTransition>
       </div>

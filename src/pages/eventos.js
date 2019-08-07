@@ -12,17 +12,20 @@ class Eventos extends React.Component {
     this.showMore = this.showMore.bind(this)
     this.state = {
       eventos: [],
+      start: 0,
       limit: 5,
     }
   }
 
   showMore = async () => {
-    await this.setState({ limit: this.state.limit + 5 })
+    await this.setState({ start: this.state.start + this.state.limit })
     try {
-      const eventos = await strapi.getEntries("eventos", {
+      const _eventos = await strapi.getEntries("eventos", {
+        _start: this.state.start,
         _limit: this.state.limit,
       })
-      this.setState({ eventos })
+      const todos = this.state.eventos.concat(_eventos)
+      this.setState({ eventos: todos })
     } catch (err) {
       alert(err)
     }
@@ -44,7 +47,6 @@ class Eventos extends React.Component {
     return (
       <Layout>
         {this.state.eventos.map((doc, index) => {
-          doc.fecha = "Format date"
           return <Evento data={doc} key={index} />
         })}
         <button onClick={this.showMore}>Mostrar 5 más</button>
