@@ -3,18 +3,12 @@ import pathInfo from "./pathInfo"
 
 const INICIO = new pathInfo("/", "Inicio")
 const QUIENES_SOMOS = new pathInfo("/", "¿Quiénes Somos?")
-const PARVULOS = new pathInfo(
-  "/",
-  'La Lucha Estudiantil De Los "Párvulos Guerrilleros" Del Tec'
-)
-const ASOCIACIONES = new pathInfo(
-  "/asociaciones",
-  "Asociaciones De Estudiantes"
-)
+const PARVULOS = new pathInfo("/timeline", "La Lucha Estudiantil De Los \"Párvulos Guerrilleros\" Del Tec")
+const ASOCIACIONES = new pathInfo("/asociaciones","Asociaciones De Estudiantes")
 const CONSEJOS_Y_ORGANOS = new pathInfo("/", "Consejos Y Órganos Feitec")
 const GRUPOS_DEPORTIVOS = new pathInfo("/", "Grupos Deportivos")
 const GRUPOS_CULTURALES = new pathInfo("/", "Grupos Culturales")
-const NORMATIVA = new pathInfo("/", "Normativa")
+const NORMATIVA = new pathInfo("/normativas/", "Normativa")
 const NOTICIAS = new pathInfo("/", "Noticias")
 const EVENTOS = new pathInfo("/eventos", "Eventos")
 const CONTACTENOS = new pathInfo("/", "Contactenos")
