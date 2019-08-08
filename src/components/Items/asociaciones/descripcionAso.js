@@ -1,6 +1,6 @@
 import React from "react"
 import { Col, Row } from "reactstrap"
-import "./style.css"
+import "./styleAso.css"
 
 const Descripcion = ({ data }) => {
   return (
