@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import Contenedor from "../components/Items/asociaciones/contenedor"
+import Contenedor from "../components/Items/asociaciones/contenedorAso"
 
 function Asociaciones({ data }) {
   return (

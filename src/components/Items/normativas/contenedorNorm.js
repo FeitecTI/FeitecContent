@@ -1,14 +1,14 @@
 import React from "react"
 
 //Components
-import Descripcion from "./descripcion"
-import Titutlo from "./titulo"
-import Fecha from "./fecha"
+import Descripcion from "./descripcionNorm"
+import Titutlo from "./tituloNorm"
+import Fecha from "./fechaNorm"
 import { Row } from "reactstrap"
 import { FaDownload } from "react-icons/fa"
 
 //Style
-import "./style.css"
+import "./styleNorm.css"
 
 const Contenedor = ({ data }) => {
   return (
@@ -19,8 +19,8 @@ const Contenedor = ({ data }) => {
       <Row lg="2">
         <Descripcion data={{ descripcion: data.descripcion }} />
       </Row>
-      <div className="row">
-        <div className="col-xs">
+      <div>
+        <div style={{ maxWidth: "80%", display: "inline-block" }}>
           <h5 style={{ marginBottom: 0, marginLeft: "1rem" }}>
             Fecha de Publicación
           </h5>
