@@ -61,7 +61,7 @@ class ImageGroup extends React.Component {
           <Media
             src={item.url}
             alt=""
-            style={{ maxHeight: "25rem", margin: "auto" }}
+            style={{ height: "25rem", margin: "auto" }}
           />
         </CarouselItem>
       )
