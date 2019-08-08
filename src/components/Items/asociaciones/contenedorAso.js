@@ -1,6 +1,6 @@
 import React from "react"
-import Descripcion from "./descripcion"
-import Imagen from "./imagen"
+import Descripcion from "./descripcionAso"
+import Imagen from "./imagenAso"
 import { Link } from "gatsby"
 
 const Contenedor = ({ data }) => {

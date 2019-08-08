@@ -1,5 +1,5 @@
 import React from "react"
-import "./style.css"
+import "./styleNorm.css"
 import { FaGavel } from "react-icons/fa"
 
 const Titulo = ({ data }) => {

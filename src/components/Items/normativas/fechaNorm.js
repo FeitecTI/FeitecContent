@@ -1,5 +1,5 @@
 import React from "react"
-import "./style.css"
+import "./styleNorm.css"
 
 const Fecha = ({ data }) => {
   if (data != null) {

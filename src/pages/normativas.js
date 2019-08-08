@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import Item from "../components/Items/normativas/contenedor"
+import Item from "../components/Items/normativas/contenedorNorm"
 
 //<Img fluid={data.logo.childImageSharp} alt="" />
 function Normativas({ data }) {
