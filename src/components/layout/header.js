@@ -31,7 +31,7 @@ class Header extends React.Component {
         </Link>
         <NavbarToggler onClick={this.toggleNavbar} className="ml-2" />
         <Collapse isOpen={!this.state.collapsed} navbar>
-          <Nav className="ml-auto" tabs>
+          <Nav className="ml-auto" tabs navbar>
             {HEADER.map((info, index) => {
               if (info instanceof pathInfo) {
                 return <Item path={info.path} text={info.text} key={index} />
