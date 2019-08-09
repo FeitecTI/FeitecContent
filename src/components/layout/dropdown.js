@@ -1,6 +1,7 @@
 import React from "react"
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu } from "reactstrap"
 import { Link } from "gatsby"
+import Styles from "./dropdown.module.css"
 
 const Dropdown = ({ text, pathsInfo }) => (
   <UncontrolledDropdown nav inNavbar>
@@ -14,7 +15,7 @@ const Dropdown = ({ text, pathsInfo }) => (
           key={index}
           className="dropdown-item text-dark"
           style={{ whiteSpace: "pre-line" }}
-          activeClassName="active"
+          activeClassName={Styles.active}
         >
           {info.text}
         </Link>
