@@ -11,7 +11,8 @@ const ASOCIACIONES = new pathInfo(
   "/asociaciones",
   "Asociaciones De Estudiantes"
 )
-const CONSEJOS_Y_ORGANOS = new pathInfo("/", "Consejos Y Órganos Feitec")
+const CONSEJOS = new pathInfo("/consejos/", "Consejos FEITEC")
+const ORGANOS = new pathInfo("/organosfederados/", "Órganos Federados")
 const GRUPOS_DEPORTIVOS = new pathInfo("/", "Grupos Deportivos")
 const GRUPOS_CULTURALES = new pathInfo("/", "Grupos Culturales")
 const NORMATIVA = new pathInfo("/normativas/", "Normativa")
@@ -21,7 +22,7 @@ const CONTACTENOS = new pathInfo("#", "Contactenos")
 
 const ACERCA_DE = new dropdowninfo([QUIENES_SOMOS, PARVULOS], "Acerca De")
 const REPRESENTACION_ESTUDIANTIL = new dropdowninfo(
-  [ASOCIACIONES, CONSEJOS_Y_ORGANOS, GRUPOS_DEPORTIVOS, GRUPOS_CULTURALES],
+  [ASOCIACIONES, CONSEJOS, ORGANOS, GRUPOS_DEPORTIVOS, GRUPOS_CULTURALES],
   "Representación Estudiatil"
 )
 
