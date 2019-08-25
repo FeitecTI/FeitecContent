@@ -16,7 +16,7 @@ const ORGANOS = new pathInfo("/organosfederados/", "Órganos Federados")
 const GRUPOS_DEPORTIVOS = new pathInfo("/", "Grupos Deportivos")
 const GRUPOS_CULTURALES = new pathInfo("/", "Grupos Culturales")
 const NORMATIVA = new pathInfo("/normativas/", "Normativa")
-const NOTICIAS = new pathInfo("#", "Noticias")
+const NOTICIAS = new pathInfo("/noticias", "Noticias")
 const EVENTOS = new pathInfo("/eventos", "Eventos")
 const CONTACTENOS = new pathInfo("#", "Contactenos")
 
