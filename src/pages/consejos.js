@@ -7,10 +7,10 @@ import SEO from "../components/seo"
 function Consejos({ data }) {
   return (
     <Layout>
-      <SEO title="Feitec" />
+      <SEO title="Consejos" />
       <div className="row">
         {data.allStrapiConsejo.edges.map((document, index) => (
-          <div className="col-md-6 my-3 shadow container">
+          <div className="col-md-6 my-3">
             <Contenedor
               data={{
                 id: document.node.id,

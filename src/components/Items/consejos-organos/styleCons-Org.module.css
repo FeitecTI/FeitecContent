@@ -1,12 +1,13 @@
 .titulo {
-  max-width: 80%;
+  max-width: 100%;
   margin-top: auto;
   text-transform: capitalize;
-  font-size: 120%;
+  font-size: 110%;
   color: #16498c;
   display: inline-block;
   font-weight: normal;
-  align-content: center;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .imagen {
@@ -18,15 +19,4 @@
   max-height: width;
   min-width: width;
   min-height: width;
-}
-
-.icon {
-  color: #f16162;
-  font-size: 1.6rem;
-  vertical-align: auto;
-  transition: 0.2s;
-}
-
-.icon:hover {
-  color: #16498c;
 }

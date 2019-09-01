@@ -1,18 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Contenedor from "../components/Items/consejos-organos/contenedorCons-Org"
-//import DeleteList from "../components/deleteList"
-
+import { graphql } from "gatsby"
 const Organosfederados = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Feitec" />
-      <div class="row">
+      <SEO title="Órganos Federados" />
+      <div className="row">
         {data.allStrapiOrganofederado.edges.map((document, index) => (
-          <div className="col-md-6 my-4 shadow container">
+          <div className="col-md-6 my-3">
             <Contenedor
               data={{
                 id: document.node.id,
