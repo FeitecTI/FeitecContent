@@ -5,15 +5,19 @@ import SEO from "../components/seo"
 import Item from "../components/Items/normativas/contenedorNorm"
 import {Row} from "reactstrap"
 
-//<Img fluid={data.logo.childImageSharp} alt="" />
 function Normativas({ data }) {
   return (
     <Layout>
-      <SEO title="Feitec" />
-      <Row>
+      <SEO title="Normativas" />
+      <h2 style={{ textAlign: "center" }}>Normativas</h2>
+      <h4 style={{ textAlign: "center", fontWeight: "normal" }}>
+        En esta sección se muestran algunos de los estatutos vigentes de la
+        Federación de Estudiantes del Tecnológico de Costa Rica.
+      </h4>
+      <div className="row">
         {data.allStrapiNormativa.edges.map((document, index) => (
           <div
-            className="col-11 col-md-6 my-3 shadow container mx-auto d-flex"
+            className="col-11 col-md-6 my-3 container mx-auto d-flex"
             key={index}
           >
             <Item
@@ -36,7 +40,7 @@ export default Normativas
 
 export const normativasQuery = graphql`
   query NormativasQuery {
-    allStrapiNormativa {
+    allStrapiNormativa(sort: { fields: Fecha_Publicacion, order: DESC }) {
       edges {
         node {
           id
