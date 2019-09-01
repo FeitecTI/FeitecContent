@@ -13,8 +13,14 @@ const ASOCIACIONES = new pathInfo(
 )
 const CONSEJOS = new pathInfo("/consejos/", "Consejos FEITEC")
 const ORGANOS = new pathInfo("/organosfederados/", "Órganos Federados")
-const GRUPOS_DEPORTIVOS = new pathInfo("/", "Grupos Deportivos")
-const GRUPOS_CULTURALES = new pathInfo("/", "Grupos Culturales")
+const GRUPOS_DEPORTIVOS = new pathInfo(
+  "/gruposdeportivos/",
+  "Grupos Deportivos"
+)
+const GRUPOS_CULTURALES = new pathInfo(
+  "/gruposculturales/",
+  "Grupos Culturales"
+)
 const NORMATIVA = new pathInfo("/normativas/", "Normativa")
 //const NOTICIAS = new pathInfo("/noticias", "Noticias")
 const EVENTOS = new pathInfo("/eventos", "Eventos")
