@@ -14,7 +14,7 @@ function Normativas({ data }) {
         En esta sección se muestran algunos de los estatutos vigentes de la
         Federación de Estudiantes del Tecnológico de Costa Rica.
       </h4>
-      <div className="row">
+      <Row>
         {data.allStrapiNormativa.edges.map((document, index) => (
           <div
             className="col-11 col-md-6 my-3 container mx-auto d-flex"
