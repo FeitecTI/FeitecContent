@@ -16,14 +16,14 @@ const ORGANOS = new pathInfo("/organosfederados/", "Órganos Federados")
 const GRUPOS_DEPORTIVOS = new pathInfo("/", "Grupos Deportivos")
 const GRUPOS_CULTURALES = new pathInfo("/", "Grupos Culturales")
 const NORMATIVA = new pathInfo("/normativas/", "Normativa")
-const NOTICIAS = new pathInfo("/noticias", "Noticias")
+//const NOTICIAS = new pathInfo("/noticias", "Noticias")
 const EVENTOS = new pathInfo("/eventos", "Eventos")
 const CONTACTENOS = new pathInfo("/directorio", "Contactenos")
 
-const ACERCA_DE = new dropdowninfo([QUIENES_SOMOS, PARVULOS], "Acerca De")
+const ACERCA_DE = new dropdowninfo([QUIENES_SOMOS, PARVULOS], "Sobre Nosotros")
 const REPRESENTACION_ESTUDIANTIL = new dropdowninfo(
   [ASOCIACIONES, CONSEJOS, ORGANOS, GRUPOS_DEPORTIVOS, GRUPOS_CULTURALES],
-  "Representación Estudiatil"
+  "Representación"
 )
 
 export const HEADER = [
@@ -31,7 +31,6 @@ export const HEADER = [
   ACERCA_DE,
   REPRESENTACION_ESTUDIANTIL,
   NORMATIVA,
-  NOTICIAS,
   EVENTOS,
   CONTACTENOS,
 ]
