@@ -1,5 +1,5 @@
 .shadow {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .titulo {
@@ -10,7 +10,8 @@
   margin-top: 1rem;
   color: rgb(0, 0, 0);
   text-align: center;
-  margin-left: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .texto {
@@ -24,11 +25,19 @@
   padding: 0.3rem;
 }
 .download-icon {
-  font-size: 1.5rem;
-  color: rgb(139, 6, 6);
+  font-size: 1.2rem;
+  color: #1b3f83;
   cursor: pointer;
+  opacity: 0.7;
+}
+
+.download-text {
+  font-size: 85%;
+  font-weight: normal;
+  color: #1b3f83;
+  opacity: 0.7;
 }
 
 .download-icon:hover {
-  color: rgb(238, 8, 8);
+  color: rgb(41, 92, 185);
 }

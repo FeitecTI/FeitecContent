@@ -14,23 +14,26 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-strapi',
+      resolve: "gatsby-source-strapi",
       options: {
-        apiURL: 'https://feitec-admin.herokuapp.com',
-        contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
-          'user',
-		  'age',
-		  'asociacion',
-		  'carrera',
-		  'consejo',
-		  'contacto',
-		  'evento',
-		  'infovariada',
-		  'normativa',
-		  'organofederado',
-      'sede',
-      'eventohistorico'
-		  
+        apiURL: "https://feitec-admin.herokuapp.com",
+        contentTypes: [
+          // List of the Content Types you want to be able to request from Gatsby.
+          "user",
+          "age",
+          "asociacion",
+          "carrera",
+          "consejo",
+          "contacto",
+          "evento",
+          "infovariada",
+          "normativa",
+          "organofederado",
+          "sede",
+          "eventohistorico",
+          "grupocultural",
+          "grupodeportivo",
+      'directorio'
         ],
         queryLimit: 1000,
       },
@@ -40,8 +43,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Feitec`,
+        short_name: `Feitec`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

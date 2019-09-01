@@ -13,9 +13,16 @@
   margin: 0 auto 1rem auto;
 }
 .sede {
-  font-size: 70%;
+  font-size: 85%;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 5%;
+  background-color: #92c84a;
+  border: 2px solid #92c84a;
+  -moz-border-radius: 100px 100px 0 0;
+  -webkit-border-radius: 100px 100px 0 0;
+  border-radius: 100px 100px 0 0;
+  color: white;
 }
 a:link {
   color: black;
@@ -37,6 +44,7 @@ a:active {
   min-height: width;
   cursor: pointer;
   background-color: "#651651";
+  transition: 0.5s;
 }
 
 @-webkit-keyframes flash {
