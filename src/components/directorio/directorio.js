@@ -1,6 +1,7 @@
 import React , {Fragment} from "react"
-import { Row , Col} from "reactstrap"
+import {Table} from "reactstrap"
 import DirectorioLine from "./directorioLine"
+import "./directorio.css";
 
 const LARGE = 2;
 const MEDIUM = 2;
@@ -8,23 +9,28 @@ const SMALL = 4;
 const EXTRASMALL = 4;
 
 const Directorio = ({contactList}) => (
-  <Fragment>
-    <Row>
-    <Col lg={LARGE} md={MEDIUM} sm={SMALL} xs={EXTRASMALL} >Siglas</Col>
-    <Col lg={LARGE} md={MEDIUM} sm={SMALL} xs={EXTRASMALL} >Correo Electronico</Col>
-    <Col lg={LARGE} md={MEDIUM} sm={SMALL} xs={EXTRASMALL}  >Telefono</Col>
-    <Col lg={LARGE} md={MEDIUM} sm={SMALL} xs={EXTRASMALL} >Puesto</Col>
-    <Col lg={LARGE} md={MEDIUM} sm={SMALL} xs={EXTRASMALL} >Sede</Col>
-    </Row>
+  
+  <Table size="sm" responsive>
+     <thead className="tableHead">
+       <tr>
+          <th>Siglas</th>
+          <th>Correo Electronico</th>
+          <th>Telefono</th>
+          <th>Puesto</th>
+          <th>Sede</th>
+       </tr>
+     </thead>
+     <tbody>
     {contactList.map((contact, index) => (
-        <div>
+        <tr className={"tabeline " + (index%2 == 0 ? "dark" : "light")} key = {index}>
           <DirectorioLine contact={contact}/>
-        </div>
+        </tr>
     )
     )
     }
+    </tbody>
 
-  </Fragment>
+  </Table>
 )
 //<DirectorioLine contact={contact}/>
 export default Directorio

@@ -3,13 +3,14 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Item from "../components/Items/normativas/contenedorNorm"
+import {Row} from "reactstrap"
 
 //<Img fluid={data.logo.childImageSharp} alt="" />
 function Normativas({ data }) {
   return (
     <Layout>
       <SEO title="Feitec" />
-      <div className="row">
+      <Row>
         {data.allStrapiNormativa.edges.map((document, index) => (
           <div
             className="col-11 col-md-6 my-3 shadow container mx-auto d-flex"
@@ -26,7 +27,7 @@ function Normativas({ data }) {
             />
           </div>
         ))}
-      </div>
+      </Row>
     </Layout>
   )
 }

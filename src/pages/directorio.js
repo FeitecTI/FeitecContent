@@ -4,7 +4,7 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Item from "../components/Items/normativas/contenedorNorm"
 import Directorio from "../components/directorio/directorio"
-
+import {Container} from "reactstrap"
 
 
 

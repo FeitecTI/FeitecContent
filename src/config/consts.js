@@ -17,7 +17,7 @@ const GRUPOS_CULTURALES = new pathInfo("/", "Grupos Culturales")
 const NORMATIVA = new pathInfo("/normativas/", "Normativa")
 const NOTICIAS = new pathInfo("#", "Noticias")
 const EVENTOS = new pathInfo("/eventos", "Eventos")
-const CONTACTENOS = new pathInfo("#", "Contactenos")
+const CONTACTENOS = new pathInfo("/directorio", "Contactenos")
 
 const ACERCA_DE = new dropdowninfo([QUIENES_SOMOS, PARVULOS], "Acerca De")
 const REPRESENTACION_ESTUDIANTIL = new dropdowninfo(
