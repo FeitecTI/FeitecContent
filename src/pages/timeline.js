@@ -19,28 +19,28 @@ const Timeline = ({data}) => {
               <Col className="mx-auto">
                   <h1 className="display-4">Lucha estudiatil de los "parvulos guerrilleros" del TEC</h1>
                   <p className="lead mb-0 text-muted text-justify">
-                    Las luchas de los 80 dejaron una gran cantidad de personajes históricos 
+                    Las luchas de los 80 dejaron una gran cantidad de personajes históricos
                     que marcaron un legado a seguir tan importante en nuestro TEC.
                     <br/>
                     Cada una de las personas que alzaron su voz lograron mejoras
-                     para la institución en distintas áreas, tales como los servicios 
-                     del Restaurante Institucional, el transporte público, la democratización 
-                     del TEC, la REPRESENTACIÓN ESTUDIANTIL, los reconocimientos de los títulos 
-                     profesionales, la creación de residencias estudiantiles y becas estudiantiles, 
+                     para la institución en distintas áreas, tales como los servicios
+                     del Restaurante Institucional, el transporte público, la democratización
+                     del TEC, la REPRESENTACIÓN ESTUDIANTIL, los reconocimientos de los títulos
+                     profesionales, la creación de residencias estudiantiles y becas estudiantiles,
                      entre otras.
                     <br/>
 
-                    Por esta razón, la FEITEC conmemora cada uno de los logros 
-                    que marcaron un antes y un después en la historia de la educación 
-                    superior pública de nuestro país, siendo la lucha de los 80’s 
-                    una de las que ha causado gran impacto y trascendencia para Latinoamérica 
+                    Por esta razón, la FEITEC conmemora cada uno de los logros
+                    que marcaron un antes y un después en la historia de la educación
+                    superior pública de nuestro país, siendo la lucha de los 80’s
+                    una de las que ha causado gran impacto y trascendencia para Latinoamérica
                     y el mundo.
                     <br/>
                   </p>
 
               </Col>
-        </Row> 
-        <Row> 
+        </Row>
+        <Row>
           <Col className="col-lg-10 mx-auto">
             <ul className="timeline">
               {data.allStrapiEventohistorico.edges.map(document => (
@@ -48,7 +48,7 @@ const Timeline = ({data}) => {
               ))}
             </ul>
           </Col>
-        </Row> 
+        </Row>
       </Container>
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
@@ -57,7 +57,7 @@ const Timeline = ({data}) => {
 export default Timeline
 
 
-export const pageQuery = graphql`  
+export const pageQuery = graphql`
 query timelineQuery {
     allStrapiEventohistorico(sort: {fields: fecha ,order: DESC}) {
         edges {

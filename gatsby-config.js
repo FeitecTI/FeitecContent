@@ -29,8 +29,8 @@ module.exports = {
 		  'normativa',
 		  'organofederado',
       'sede',
-      'eventohistorico'
-		  
+      'eventohistorico',
+      'directorio'
         ],
         queryLimit: 1000,
       },
