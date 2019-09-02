@@ -1,7 +1,7 @@
 import React, {Fragment} from "react"
 import {Row,Col,Media} from 'reactstrap';
 import "./acta.css";
-import DownloadIcon from "../../images/icons/download.svg";
+import DownloadIcon from "../../images/Icons/download.svg";
 import { Link } from "gatsby"
 import LightDate from "../date/lightDate";
 
