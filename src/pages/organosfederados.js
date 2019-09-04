@@ -3,24 +3,27 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Contenedor from "../components/Items/consejos-organos/contenedorCons-Org"
 import { graphql } from "gatsby"
+import { Col, Row, Container } from "reactstrap"
 const Organosfederados = ({ data }) => {
   return (
     <Layout>
       <SEO title="Órganos Federados" />
-      <div className="row">
-        {data.allStrapiOrganofederado.edges.map((document, index) => (
-          <div className="col-md-6 my-3">
-            <Contenedor
-              data={{
-                id: document.node.id,
-                src: document.node.Preview.childImageSharp.resize.src,
-                nombre: document.node.nombre,
-              }}
-              key={index}
-            />
-          </div>
-        ))}
-      </div>
+      <Col>
+        <Row md="4">
+          {data.allStrapiOrganofederado.edges.map((document, index) => (
+            <Container className="col-md-6 my-3">
+              <Contenedor
+                data={{
+                  id: document.node.id,
+                  src: document.node.Preview.childImageSharp.resize.src,
+                  nombre: document.node.nombre,
+                }}
+                key={index}
+              />
+            </Container>
+          ))}
+        </Row>
+      </Col>
     </Layout>
   )
 }
