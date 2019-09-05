@@ -8,7 +8,7 @@ const Organosfederados = ({ data }) => {
   return (
     <Layout>
       <SEO title="Órganos Federados" />
-      <Col>
+      <Col md="10" style= {{margin:"0 auto"}}>
         <Row md="4">
           {data.allStrapiOrganofederado.edges.map((document, index) => (
             <Container className="col-md-6 my-3">
