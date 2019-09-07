@@ -4,6 +4,7 @@ import ListaNoticias from "../components/Items/noticias/ListaNoticias"
 import { STRAPI_URL } from "../config/strapiConfig"
 import Strapi from "strapi-sdk-javascript"
 import Layout from "../components/layout/layout"
+import { Col } from "reactstrap"
 
 const strapi = new Strapi(STRAPI_URL)
 
@@ -41,17 +42,19 @@ class Noticias extends React.Component {
 
     return (
       <Layout>
-        {this.state.selected !== -1 ? (
-          <Noticia
-            selected={this.state.noticias[this.state.selected]}
-            onClick={this.goBack}
-          />
-        ) : (
-          <ListaNoticias
-            noticias={this.state.noticias}
-            onClick={this.selectItem}
-          />
-        )}
+        <Col md="10" style={{ margin: "0 auto" }}>
+          {this.state.selected !== -1 ? (
+            <Noticia
+              selected={this.state.noticias[this.state.selected]}
+              onClick={this.goBack}
+            />
+          ) : (
+            <ListaNoticias
+              noticias={this.state.noticias}
+              onClick={this.selectItem}
+            />
+          )}
+        </Col>
       </Layout>
     )
   }
