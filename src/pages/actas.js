@@ -40,6 +40,7 @@ class Actas extends React.Component {
 
     return (
       <Layout>
+          <Col xl ="10" lg ="10" md = "11" sm = "12" xs="12" style = {{margin:"0 auto"}}>
             <Row>
                 <div style={{backgroundColor : "#9BC434" , minWidth:"0.6rem",maxHeight:"2.2rem"}}/>
               <Col>
@@ -54,6 +55,7 @@ class Actas extends React.Component {
             {this.state.start < this.state.limit &&
             <button onClick={this.loadMore}>Cargar Mas</button>
             }
+            </Col>
       </Layout>
     )
   }

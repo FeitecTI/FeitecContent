@@ -29,7 +29,6 @@ const Directorio = ({contactList}) => (
     )
     }
     </tbody>
-
   </Table>
 )
 //<DirectorioLine contact={contact}/>
