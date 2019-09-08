@@ -41,7 +41,7 @@ const Timeline = ({data}) => {
               </Col>
         </Row>
         <Row>
-          <Col className="col-lg-10 mx-auto">
+          <Col className="mx-auto" xl="10" lg="10" md="10" sm="12" ls="12">
             <ul className="timeline">
               {data.allStrapiEventohistorico.edges.map(document => (
                 <EventoHistorico evento={document.node}/>

@@ -12,7 +12,7 @@ const Acta = ({data}) => {
   <Row className="componentBody"> 
     <Col xl ="1" lg="1" md="1" sm="1" xs="1">
       <a href={archivo.url} target="_blank" rel="noopener noreferrer">
-        <Media src={DownloadIcon} style={{ maxHeight: "2rem" }}  />
+        <Media src={DownloadIcon} style={{ minWidth: "2rem", maxHeight:"3rem"}}  />
       </a>
     </Col>
     <Col>
