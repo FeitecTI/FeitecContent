@@ -1,19 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
+import Title from "../components/layout/Title"
 import SEO from "../components/seo"
 import Contenedor from "../components/Items/asociaciones/contenedorAso"
+import {Row, Col,Container} from 'reactstrap';
 
 function Asociaciones({ data }) {
   return (
     <Layout>
       <SEO title="Feitec" />
-      <div className="row">
+      <Title text ="Asociaciones"/>
+      <Row className="align-items-center justify-content-center " style={{minWidth:"100%"}}>
         {data.allStrapiAsociacion.edges.map((document, index) => (
-          <div
-            className="col-11 col-md-4 my-3 shadow container mx-auto d-flex"
-            key={index}
-          >
             <Contenedor
               data={{
                 id: document.node.id,
@@ -22,10 +21,10 @@ function Asociaciones({ data }) {
                 nombre: document.node.nombre,
                 sede: document.node.sede.nombre,
               }}
+            key={index}
             ></Contenedor>
-          </div>
         ))}
-      </div>
+      </Row>
     </Layout>
   )
 }
