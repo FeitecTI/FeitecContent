@@ -42,7 +42,7 @@ class Noticias extends React.Component {
 
     return (
       <Layout>
-        <Col md="10" style={{ margin: "0 auto" }}>
+        <Col className="mx-auto" xl="10" lg="10" md="11" sm="11" xs="11">
           {this.state.selected !== -1 ? (
             <Noticia
               selected={this.state.noticias[this.state.selected]}

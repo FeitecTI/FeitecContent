@@ -9,7 +9,7 @@ import { AZUL_FEITEC } from "../config/consts"
 const Normativas = ({ data }) => (
   <Layout>
     <SEO title="Normativas" />
-    <Col lg="10" md="10" sm="10" style={{ margin: "0 auto" }}>
+    <Col className="mx-auto" xl="10" lg="10" md="11" sm="12" xs="12">
       <div
         style={{
           fontWeight: "bold",

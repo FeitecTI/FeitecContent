@@ -8,10 +8,10 @@ function Consejos({ data }) {
   return (
     <Layout>
       <SEO title="Consejos" />
-      <Col md="10" style={{ margin: "0 auto" }}>
+      <Col className="mx-auto" xl="10" lg="10" md="11" sm="12" xs="12">
         <Row md="4">
           {data.allStrapiConsejo.edges.map((document, index) => (
-            <div className="container">
+            <Container>
               <Contenedor
                 data={{
                   id: document.node.id,
@@ -20,7 +20,7 @@ function Consejos({ data }) {
                 }}
                 key={index}
               />
-            </div>
+            </Container>
           ))}
         </Row>
       </Col>

@@ -3,29 +3,37 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Contenedor from "../components/Items/asociaciones/contenedorAso"
+import { Row, Col } from "reactstrap"
 
 function Asociaciones({ data }) {
   return (
     <Layout>
       <SEO title="Feitec" />
-      <div className="row">
-        {data.allStrapiAsociacion.edges.map((document, index) => (
-          <div
-            className="col-11 col-md-4 my-3 shadow container mx-auto d-flex"
-            key={index}
-          >
-            <Contenedor
-              data={{
-                id: document.node.id,
-                src: document.node.logo.childImageSharp.fluid.src,
-                acronimo: document.node.acronimo,
-                nombre: document.node.nombre,
-                sede: document.node.sede.nombre,
-              }}
-            ></Contenedor>
-          </div>
-        ))}
-      </div>
+      <Col className="mx-auto" xl="10" lg="10" md="11" sm="12" xs="12">
+        <Row>
+          {data.allStrapiAsociacion.edges.map((document, index) => (
+            <Col
+              xl="4"
+              lg="4"
+              md="4"
+              sm="11"
+              xs="11"
+              className="my-3 shadow container mx-auto d-flex"
+              key={index}
+            >
+              <Contenedor
+                data={{
+                  id: document.node.id,
+                  src: document.node.logo.childImageSharp.fluid.src,
+                  acronimo: document.node.acronimo,
+                  nombre: document.node.nombre,
+                  sede: document.node.sede.nombre,
+                }}
+              ></Contenedor>
+            </Col>
+          ))}
+        </Row>
+      </Col>
     </Layout>
   )
 }
