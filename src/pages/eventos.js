@@ -3,6 +3,7 @@ import Evento from "../components/evento/evento"
 import Strapi from "strapi-sdk-javascript"
 import { STRAPI_URL } from "../config/strapiConfig"
 import Layout from "../components/layout/layout"
+import { Col } from "reactstrap"
 
 const strapi = new Strapi(STRAPI_URL)
 
@@ -46,10 +47,12 @@ class Eventos extends React.Component {
   render() {
     return (
       <Layout>
-        {this.state.eventos.map((doc, index) => {
-          return <Evento data={doc} key={index} />
-        })}
-        <button onClick={this.showMore}>Mostrar 5 más</button>
+        <Col className="mx-auto" xl="10" lg="10" md="11" sm="12" xs="12">
+          {this.state.eventos.map((doc, index) => {
+            return <Evento data={doc} key={index} />
+          })}
+          <button onClick={this.showMore}>Mostrar 5 más</button>
+        </Col>
       </Layout>
     )
   }

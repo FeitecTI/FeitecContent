@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Contenedor from "../components/Items/asociaciones/contenedorAso"
 import {Row, Col,Container} from 'reactstrap';
 
+
 function Asociaciones({ data }) {
   return (
     <Layout>
@@ -25,6 +26,7 @@ function Asociaciones({ data }) {
             ></Contenedor>
         ))}
       </Row>
+
     </Layout>
   )
 }

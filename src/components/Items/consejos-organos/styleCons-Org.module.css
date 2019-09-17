@@ -1,22 +1,8 @@
 .titulo {
-  max-width: 100%;
-  margin-top: auto;
   text-transform: capitalize;
   font-size: 110%;
   color: #16498c;
   display: inline-block;
   font-weight: normal;
-  padding-left: 0.5rem;
-  padding-top: 0.5rem;
-}
-
-.imagen {
-  border-style: solid;
-  border-width: 0 0 0.2rem 0;
-  border-color: #f16162;
-  margin-bottom: 0.5rem;
-  max-width: width;
-  max-height: width;
-  min-width: width;
-  min-height: width;
+  padding-top: 0.1rem;
 }

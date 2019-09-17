@@ -6,7 +6,8 @@
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   min-height: 8.5rem !important;
-  padding: 0 !important;
+  margin: auto;
+  margin-top: 1rem !important;
 }
 
 .bar {

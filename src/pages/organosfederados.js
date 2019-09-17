@@ -3,24 +3,24 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Contenedor from "../components/Items/consejos-organos/contenedorCons-Org"
 import { graphql } from "gatsby"
-import { Col, Row, Container } from "reactstrap"
+import { Col, Row } from "reactstrap"
 const Organosfederados = ({ data }) => {
   return (
     <Layout>
       <SEO title="Órganos Federados" />
-      <Col md="10" style= {{margin:"0 auto"}}>
+      <Col className="mx-auto" xl="10" lg="10" md="11" sm="11" xs="11">
         <Row md="4">
           {data.allStrapiOrganofederado.edges.map((document, index) => (
-            <Container className="col-md-6 my-3">
+            <div class="container">
               <Contenedor
                 data={{
                   id: document.node.id,
-                  src: document.node.Preview.childImageSharp.resize.src,
+                  src: document.node.Preview.childImageSharp.fixed.src,
                   nombre: document.node.nombre,
                 }}
                 key={index}
               />
-            </Container>
+            </div>
           ))}
         </Row>
       </Col>
@@ -39,7 +39,7 @@ export const pageQuery = graphql`
           nombre
           Preview {
             childImageSharp {
-              resize(width: 550, height: 300, quality: 100) {
+              fixed(height: 200, width: 400, quality: 100) {
                 src
               }
             }
