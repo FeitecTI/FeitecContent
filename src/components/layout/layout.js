@@ -6,9 +6,10 @@ import MainHeader from "./MainHeader"
 import "./layout.css"
 
 const Layout = ({ children, isMain }) => {
+  const isMobile = window.innerWidth < 480
   return (
     <>
-      {isMain ? <MainHeader /> : <Header />}
+      {isMain && !isMobile ? <MainHeader /> : <Header />}
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
