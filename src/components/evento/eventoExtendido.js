@@ -11,13 +11,14 @@ import ImageGroup from "../imagenes/group/imageGroup"
 class EventoExtendido extends React.Component {
   render() {
     return this.props.status ? (
-      <div className={Styles.rect}>
+      <>
         <CSSTransition
           key={this.props.data.id}
           timeout={500}
           appear
           in={this.props.status}
           classNames="fade"
+          className={Styles.rect}
         >
           <div>
             <Titulo
@@ -43,7 +44,7 @@ class EventoExtendido extends React.Component {
             />
           </div>
         </CSSTransition>
-      </div>
+      </>
     ) : (
       <></>
     )

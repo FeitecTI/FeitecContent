@@ -22,19 +22,16 @@ class Header extends React.Component {
       collapsed: !this.state.collapsed,
     })
   }
+
   render() {
     return (
-      <Navbar
-        light
-        expand="md"
-        style={{ backgroundColor: "#eeeeee", maxHeight: "5rem" }}
-      >
+      <Navbar light expand="md" style={{ backgroundColor: "#eeeeee" }}>
         <Link to="/" className="navbar-brand mr-auto text-dark">
-          <Media src={logo} style={{ maxHeight: "3rem", margin: "0 auto" }} />
+          <Media src={logo} className="mx-auto" style={{ maxHeight: "3rem" }} />
         </Link>
         <NavbarToggler onClick={this.toggleNavbar} className="ml-2" />
         <Collapse isOpen={!this.state.collapsed} navbar>
-          <Nav className="ml-auto" navbar>
+          <Nav className="ml-auto" navbar card>
             {HEADER.map((info, index) => {
               if (info instanceof pathInfo) {
                 return <Item path={info.path} text={info.text} key={index} />

@@ -6,24 +6,16 @@ import MainHeader from "./MainHeader"
 import "./layout.css"
 
 const Layout = ({ children, isMain }) => {
+  const isMobile = (typeof window !== 'undefined' && window.innerWidth < 480)
   return (
     <>
-      {isMain ? <MainHeader /> : <Header />}
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: "85%",
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      {isMain && !isMobile ? <MainHeader /> : <Header />}
+      <main>{children}</main>
+      <footer>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </footer>
     </>
   )
 }

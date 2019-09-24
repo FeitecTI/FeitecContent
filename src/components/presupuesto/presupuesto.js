@@ -13,11 +13,11 @@ const Presupuesto = ({data}) => {
     <Row className="componentBody"> 
       <Col xl ="1" lg="1" md="1" sm="1" xs="1">
         <a href={archivo.url} target="_blank" rel="noopener noreferrer">
-          <Media src={DownloadIcon} style={{ maxHeight: "2rem" }}  />
+          <Media src={DownloadIcon} style={{ minWidth: "2rem", maxHeight:"3rem"}}  />
         </a>
       </Col>
 
-      <Col xl ="9" lg="9" md="9">
+      <Col xl ="9" lg="9" md="9" sm="10" xs="10">
         <h4 className="tittleText">{data.nombre}</h4>
         <p  className="text-muted descriptionText">{data.descripcion}</p>
         <LightDate text="Publicado: " date={new Date(data.createdAt)}/>

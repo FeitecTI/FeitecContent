@@ -3,38 +3,41 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Item from "../components/Items/normativas/contenedorNorm"
-import {Row} from "reactstrap"
+import { Col } from "reactstrap"
+import { AZUL_FEITEC } from "../config/consts"
 
-function Normativas({ data }) {
-  return (
-    <Layout>
-      <SEO title="Normativas" />
-      <h2 style={{ textAlign: "center" }}>Normativas</h2>
-      <h4 style={{ textAlign: "center", fontWeight: "normal" }}>
-        En esta sección se muestran algunos de los estatutos vigentes de la
-        Federación de Estudiantes del Tecnológico de Costa Rica.
-      </h4>
-      <Row>
-        {data.allStrapiNormativa.edges.map((document, index) => (
-          <div
-            className="col-11 col-md-6 my-3 container mx-auto d-flex"
-            key={index}
-          >
-            <Item
-              data={{
-                titulo: document.node.Nombre,
-                descripcion: document.node.Descripcion,
-                link: document.node.Link,
-                id: document.node.id,
-                fecha: document.node.Fecha_Publicacion,
-              }}
-            />
-          </div>
-        ))}
-      </Row>
-    </Layout>
-  )
-}
+const Normativas = ({ data }) => (
+  <Layout>
+    <SEO title="Normativas" />
+    <Col className="mx-auto" xl="10" lg="10" md="11" sm="12" xs="12">
+      <div
+        style={{
+          fontWeight: "bold",
+          fontSize: "1.6rem",
+          borderStyle: "solid",
+          borderWidth: "0 0 0 0.5rem",
+          borderColor: AZUL_FEITEC,
+          marginTop: "2.5rem",
+          whiteSpace: "pre",
+        }}
+      >
+        {"  Normativas FEITEC"}
+      </div>
+      {data.allStrapiNormativa.edges.map((document, index) => (
+        <Item
+          data={{
+            titulo: document.node.Nombre,
+            descripcion: document.node.Descripcion,
+            link: document.node.Link,
+            id: document.node.id,
+            fecha: document.node.Fecha_Publicacion,
+          }}
+          key={index}
+        />
+      ))}
+    </Col>
+  </Layout>
+)
 
 export default Normativas
 

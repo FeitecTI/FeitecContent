@@ -1,16 +1,6 @@
 import React from "react"
 import "./styleNorm.css"
-import { FaGavel } from "react-icons/fa"
 
-const Titulo = ({ data }) => {
-  return (
-    <div className="contenedor">
-      <h3 className="titulo">
-        {" "}
-        <FaGavel /> {" | "}
-        {data.titulo}{" "}
-      </h3>
-    </div>
-  )
-}
+const Titulo = ({ data }) => <div className="titulo">{data.titulo}</div>
+
 export default Titulo
