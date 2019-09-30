@@ -1,23 +1,24 @@
-.descriptionText{
-    font-size: 11pt ;
-    margin-top: 2pt; 
-    margin-bottom: 2pt;
+.tableHead {
+  background-color: #555555;
+  color: #fff;
 }
 
-
-
-.tittleText{
-    margin-bottom: 2pt;
+.tableLine {
+  height: 5pt;
 }
 
-.componentBody{
-    margin-bottom: 20pt;
+.directoryTable {
+  margin: 0 !important;
+  padding: 0;
 }
 
-.marker{
-    background-color: #75B1E1;
-    color: #75B1E1;
-    min-width: 3pt;
-    min-height: 3pt;
+.dark {
+  background-color: #c4c4c4;
 }
 
+.light {
+  background-color: #fff;
+}
+.date {
+  font-size: 5rem;
+}

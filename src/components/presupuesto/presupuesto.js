@@ -1,33 +1,33 @@
-import React, {Fragment} from "react"
-import {Row,Col,Media} from 'reactstrap';
-import "./presupuesto.css";
-import DownloadIcon from "../../images/Icons/download.svg";
-import { Link } from "gatsby"
-import LightDate from "../date/lightDate";
+import React from "react"
+import { Table } from "reactstrap"
+import "./presupuesto.css"
+import PresupuestoLine from "./presupuestoLine"
 
-//      <div className="marker"></div>   
-const Presupuesto = ({data}) => {
-    var archivo = data.archivo;
-    console.log({data});
-    return(
-    <Row className="componentBody"> 
-      <Col xl ="1" lg="1" md="1" sm="1" xs="1">
-        <a href={archivo.url} target="_blank" rel="noopener noreferrer">
-          <Media src={DownloadIcon} style={{ minWidth: "2rem", maxHeight:"3rem"}}  />
-        </a>
-      </Col>
+//import DownloadIcon from "../../images/Icons/download.svg"
 
-      <Col xl ="9" lg="9" md="9" sm="10" xs="10">
-        <h4 className="tittleText">{data.nombre}</h4>
-        <p  className="text-muted descriptionText">{data.descripcion}</p>
-        <LightDate text="Publicado: " date={new Date(data.createdAt)}/>
-      </Col>
-      <Col>
-        <LightDate text="Desde: " date={new Date(data.inicio)}/>
-        <LightDate text="Hasta: "date={new Date(data.fin)}/>
-      </Col>
-    </Row>
-    )
-  }
-  
-  export default Presupuesto;
+//      <div className="marker"></div>
+const Presupuesto = ({ data }) => {
+  return (
+    <Table size="sm" responsive>
+      <thead className="tableHead">
+        <tr>
+          <th>Descargar</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Publicado</th>
+          <th>Desde</th>
+          <th>Hasta</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((presupuesto, index) => (
+          <tr className={"tabeline light"} key={index}>
+            <PresupuestoLine data={presupuesto} />
+          </tr>
+        ))}
+      </tbody>
+    </Table>
+  )
+}
+
+export default Presupuesto
