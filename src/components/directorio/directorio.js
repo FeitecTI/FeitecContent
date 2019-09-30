@@ -11,7 +11,7 @@ const EXTRASMALL = 4;
 const Directorio = ({contactList}) => (
   
   <Table size="sm" responsive>
-     <thead className="tableHead">
+     <thead className="tableHead " style={{backgroundColor:"#CFCFCF",color:"black"}}>
        <tr>
           <th>Siglas</th>
           <th>Correo Electronico</th>
@@ -22,7 +22,7 @@ const Directorio = ({contactList}) => (
      </thead>
      <tbody>
     {contactList.map((contact, index) => (
-        <tr className={"tabeline " + (index%2 == 0 ? "dark" : "light")} key = {index}>
+        <tr className={"tabeline light"} key = {index}>
           <DirectorioLine contact={contact}/>
         </tr>
     )

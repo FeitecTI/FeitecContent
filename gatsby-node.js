@@ -58,6 +58,13 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      allStrapiCategoriacontacto {
+        edges {
+          node {
+            id
+          }
+        }
+      }
     }
     `
   ).then(result => {
@@ -103,6 +110,18 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })
+
+    // Create pages for each contact group
+    result.data.allStrapiCategoriacontacto.edges.forEach(({ node }) => {
+      createPage({
+        path: `/${node.id}`,
+        component: path.resolve(`src/components/contacto/categoriaContacto.js`),
+        context: {
+          id: node.id,
+        },
+      })
+    })
+
   })
   // Query for articles nodes to use in creating pages.
   return getAsociaciones
