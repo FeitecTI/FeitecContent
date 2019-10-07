@@ -1,45 +1,34 @@
+.contenedor {
+  background-color: #f5f5f5;
+  display: flex;
+  padding: 0;
+  border-radius: 1rem;
+}
+
 .media {
-  margin-top: 1.2rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 500px;
-  height: 230px;
+  height: 10rem;
 }
 
 .titulo {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   font-size: 22px;
-  border-style: solid;
-  border-width: 0px 0px thin 0px;
-  border-color: #eb585c;
-  float: left;
+  font-weight: 300;
   white-space: pre-line;
+  width: 100%;
 }
 
 .descripcion {
-  width: 98%;
-  height: 9.4rem;
+  width: 100%;
   white-space: pre-line;
-  display: inline-block;
   margin-top: 0.5rem;
+  color: #808080;
 }
 
 .publicador {
-  display: inline-block;
-  color: #16498c;
-  margin-top: 0.5rem;
+  color: #808080;
+  width: 100%;
 }
 
-.fecha {
-  color: #909090;
-}
-
-.arrow {
-  font-size: 2rem;
-  color: #eb585c;
-}
-
-.box {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: auto;
+.shadow {
+  box-shadow: -1rem 1rem 0.5rem rgba(0, 0, 0, 0.18);
 }

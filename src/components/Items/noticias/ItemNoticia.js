@@ -16,45 +16,56 @@ const ItemNoticia = ({
   fecha = fecha.getDate() + "/" + fecha.getMonth() + "/" + fecha.getFullYear()
   return (
     <Row
-      style={{ marginTop: "2rem" }}
       style={{
         marginTop: "3rem",
-        paddingTop: "0.7rem",
-        paddingLeft: "0.7rem",
-      }}
-      onClick={() => {
-        onClick(id)
+        width: "100%",
       }}
     >
-      <Col xs="6" sm="4" style={{ padding: 0 }}>
-        <Media src={imagen} alt="" className={Styles.media} />
-      </Col>
       <Col
-        xs="6"
-        sm="4"
-        style={{ position: "relative", backgroundColor: "#F5F5F5" }}
+        xs="11"
+        sm="11"
+        md="8"
+        lg="8"
+        xl="8"
+        className={`${Styles.contenedor} ${Styles.shadow}`}
+        onClick={() => {
+          onClick(id)
+        }}
       >
-        <div style={{ marginLeft: "0.5rem" }}>
-          <Row>
-            <div style={{ fontSize: "110%" }} className={Styles.titulo}>
-              {titulo}
-            </div>
-          </Row>
-          <Row>
-            <div className={Styles.publicador}>
+        <Col xs="4" sm="4" md="4" lg="4" xl="4" style={{ height: "10rem" }}>
+          <Media src={imagen} alt="" className={`${Styles.media} mx-auto`} />
+        </Col>
+        <Col xs="8" sm="8" md="8" lg="8" xl="8" style={{ height: "10rem" }}>
+          <Row style={{ marginLeft: "0.5rem" }}>
+            <Row className={Styles.titulo}>{titulo}</Row>
+            <Row className={Styles.publicador}>
               {fecha}
               {", "}
               {publicador}
-            </div>
+            </Row>
+            <Row className={Styles.descripcion}>{descripcion}</Row>
           </Row>
-          <Row>
-            <div style={{ fontSize: "90%" }} className={Styles.descripcion}>
-              {descripcion}
-            </div>
-          </Row>
-        </div>
+        </Col>
       </Col>
     </Row>
   )
 }
 export default ItemNoticia
+
+/*
+<Row style={{ fontSize: "110%" }} className={Styles.titulo}>
+              <Col>{titulo}</Col>
+            </Row>
+            <Row className={Styles.publicador}>
+              <Col>
+                {fecha}
+                {", "}
+                {publicador}
+              </Col>
+            </Row>
+            <Row>
+              <div style={{ fontSize: "90%" }} className={Styles.descripcion}>
+                {descripcion}
+              </div>
+            </Row>
+*/
