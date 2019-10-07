@@ -33,7 +33,8 @@ module.exports = {
           "eventohistorico",
           "grupocultural",
           "grupodeportivo",
-      'directorio'
+          "directorio",
+          "Noticia",
         ],
         queryLimit: 1000,
       },

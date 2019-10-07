@@ -46,6 +46,8 @@ class Noticias extends React.Component {
           {this.state.selected !== -1 ? (
             <Noticia
               selected={this.state.noticias[this.state.selected]}
+              next={this.state.noticias[this.state.selected + 1]}
+              prev={this.state.noticias[this.state.selected - 1]}
               onClick={this.goBack}
             />
           ) : (
