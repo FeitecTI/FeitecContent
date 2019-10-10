@@ -11,7 +11,7 @@ const ListaNoticias = ({ noticias, onClick }) => (
         titulo={doc.titulo}
         publicador={doc.autor}
         fecha={doc.fecha}
-        descripcion={doc.descripcion.substr(0, 180) + "..."}
+        descripcion={doc.descripcion.substr(0, 100) + "..."}
         imagen={doc.imagenes[0].url}
         onClick={onClick}
       />

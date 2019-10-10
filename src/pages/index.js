@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 //import DeleteList from "../components/deleteList"
 
 const IndexPage = () => (
-  <Layout isMain>
+  <Layout>
     <SEO title="Feitec" />
     <p>JAJA SALU3 Solo estoy rellenando para que no se despiche tere ok bai</p>
   </Layout>

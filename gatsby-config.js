@@ -33,7 +33,10 @@ module.exports = {
           "eventohistorico",
           "grupocultural",
           "grupodeportivo",
-      'directorio'
+          "categoriacontacto",
+          "directorio",
+          "Noticia",
+          "rutabuses",
         ],
         queryLimit: 1000,
       },

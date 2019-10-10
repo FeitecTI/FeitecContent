@@ -1,6 +1,6 @@
 import React from "react"
-import { Row, Col, Media } from "reactstrap"
-import { FaAngleRight } from "react-icons/fa"
+import { Row, Col, Media, Container } from "reactstrap"
+import { FaAngleRight, FaAutoprefixer } from "react-icons/fa"
 import Styles from "./ItemNoticia.module.css"
 
 const ItemNoticia = ({
@@ -15,25 +15,57 @@ const ItemNoticia = ({
   fecha = new Date(fecha)
   fecha = fecha.getDate() + "/" + fecha.getMonth() + "/" + fecha.getFullYear()
   return (
-    <Col lg="4" md="4" sm="12" xs="12" className={Styles.box}>
-      <Media src={imagen} alt="" className={Styles.media} />
-      <div className={Styles.titulo}>{titulo}</div>
-      <div className={Styles.descripcion}>{descripcion}</div>
-      <div className={Styles.publicador}>{publicador}</div>
-      <Row>
-        <Col lg="10" md="10" sm="10" xs="10" className={Styles.fecha}>
-          {fecha}
+    <Row
+      style={{
+        marginTop: "3rem",
+        width: "100%",
+      }}
+    >
+      <Col
+        xs="11"
+        sm="11"
+        md="8"
+        lg="8"
+        xl="8"
+        className={`${Styles.contenedor} ${Styles.shadow}`}
+        onClick={() => {
+          onClick(id)
+        }}
+      >
+        <Col xs="4" sm="4" md="4" lg="4" xl="4" style={{ height: "10rem" }}>
+          <Media src={imagen} alt="" className={`${Styles.media} mx-auto`} />
         </Col>
-        <Col lg="2" md="2" sm="2" xs="2">
-          <FaAngleRight
-            className={Styles.arrow}
-            onClick={() => {
-              onClick(id)
-            }}
-          />
+        <Col xs="8" sm="8" md="8" lg="8" xl="8" style={{ height: "10rem" }}>
+          <Row style={{ marginLeft: "0.5rem" }}>
+            <Row className={Styles.titulo}>{titulo}</Row>
+            <Row className={Styles.publicador}>
+              {fecha}
+              {", "}
+              {publicador}
+            </Row>
+            <Row className={Styles.descripcion}>{descripcion}</Row>
+          </Row>
         </Col>
-      </Row>
-    </Col>
+      </Col>
+    </Row>
   )
 }
 export default ItemNoticia
+
+/*
+<Row style={{ fontSize: "110%" }} className={Styles.titulo}>
+              <Col>{titulo}</Col>
+            </Row>
+            <Row className={Styles.publicador}>
+              <Col>
+                {fecha}
+                {", "}
+                {publicador}
+              </Col>
+            </Row>
+            <Row>
+              <div style={{ fontSize: "90%" }} className={Styles.descripcion}>
+                {descripcion}
+              </div>
+            </Row>
+*/
