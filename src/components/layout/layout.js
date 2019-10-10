@@ -4,9 +4,9 @@ import PropTypes from "prop-types"
 import Header from "./header"
 import MainHeader from "./MainHeader"
 import "./layout.css"
-
+import "../../fonts/fonts.css"
 const Layout = ({ children, isMain }) => {
-  const isMobile = (typeof window !== 'undefined' && window.innerWidth < 480)
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 480
   return (
     <>
       {isMain && !isMobile ? <MainHeader /> : <Header />}

@@ -26,16 +26,10 @@ class Presupuestos extends React.Component {
   }
 
   async loadMore() {
-    const _presupuestos = await strapi.getEntries("presupuestos", {
-      _start: this.state.start,
-      _limit: this.state.limit,
-    })
-
+    const _presupuestos = await strapi.getEntries("presupuestos")
     var allPresupuestos = this.state.presupuestos.concat(_presupuestos)
-
     this.setState({
       presupuestos: allPresupuestos,
-      start: this.state.start + this.state.limit,
     })
   }
 
@@ -55,12 +49,7 @@ class Presupuestos extends React.Component {
               <h2>Presupuestos</h2>
             </Col>
           </Row>
-          {this.state.presupuestos.map((presupuesto, index) => (
-            <Presupuesto data={presupuesto} key={index} />
-          ))}
-          {this.state.start < this.state.limit && (
-            <button onClick={this.loadMore}>Cargar Mas</button>
-          )}
+          <Presupuesto data={this.state.presupuestos} />
         </Col>
       </Layout>
     )

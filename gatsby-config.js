@@ -34,7 +34,9 @@ module.exports = {
           "grupocultural",
           "grupodeportivo",
           "categoriacontacto",
-        'directorio'
+          "directorio",
+          "Noticia",
+          "rutabuses",
         ],
         queryLimit: 1000,
       },
