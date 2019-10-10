@@ -33,6 +33,7 @@ module.exports = {
           "eventohistorico",
           "grupocultural",
           "grupodeportivo",
+          "categoriacontacto",
           "directorio",
           "Noticia",
           "rutabuses",
