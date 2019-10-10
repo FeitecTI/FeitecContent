@@ -1,29 +1,36 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-//import DeleteList from "../components/deleteList"
+import Bienvenida from "../components/bienvenida/bienvenida"
+import { Col } from "reactstrap"
+import Titulo from "../components/titulo/titulo"
+import HorarioContainer from "../components/horarioDeBuses/horarioContainer"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Feitec" />
-    <p>JAJA SALU3 Solo estoy rellenando para que no se despiche tere ok bai</p>
+    <Bienvenida />
+    <Col className="mx-auto" xl="10" lg="10" md="11" sm="12" xs="12">
+      <Titulo Color="#9AC42F" Text="Noticias y Eventos" />
+      <Titulo Color="#9AC42F" Text="Horario De Buses" />
+      <HorarioContainer routes={data.allStrapiRutabuses.edges} />
+    </Col>
   </Layout>
 )
 
 export default IndexPage
 
-/*
-export const pageQuery = graphql`  
-  query IndexQuery {
-    allStrapiDeletearticle {
+export const MainPageQuery = graphql`
+  query IndextQuery {
+    allStrapiRutabuses {
       edges {
         node {
-          id
-          tittle
-          content
+          horariosSalida
+          nombreRuta
+          infoExtra
+          strapiId
         }
       }
     }
   }
-`*/
+`
