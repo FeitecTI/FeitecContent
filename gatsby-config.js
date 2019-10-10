@@ -34,6 +34,7 @@ module.exports = {
           "grupocultural",
           "grupodeportivo",
           "directorio",
+          "Noticia",
           "rutabuses",
         ],
         queryLimit: 1000,
