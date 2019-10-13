@@ -6,7 +6,7 @@ import DescripcionNoticia from "./descripcionNoticia"
 import { Col, Row } from "reactstrap"
 import close from "../../images/Icons/cross.png"
 
-const Noticia = ({ selected, onClick, next, prev }) => {
+const Noticia = ({ selected, onClick, next, prev, index }) => {
   return (
     <>
       <Row
@@ -66,17 +66,22 @@ const Noticia = ({ selected, onClick, next, prev }) => {
               borderRadius: "0 0.5rem 0.5rem 0",
             }}
           >
-            <img
-              src={close}
-              alt="Cerrar Noticia"
-              style={{
-                marginTop: "1rem",
-                marginRight: "1rem",
-                height: "1rem",
-                float: "right",
-              }}
-              onClick={onClick}
-            />
+            {index == false ? (
+              <img
+                src={close}
+                alt="Cerrar Noticia"
+                style={{
+                  marginTop: "1rem",
+                  marginRight: "1rem",
+                  height: "1rem",
+                  float: "right",
+                }}
+                onClick={onClick}
+              />
+            ) : (
+              <></>
+            )}
+
             <InfoPrincipalNoticia
               titulo={selected.titulo}
               fecha={selected.fecha}

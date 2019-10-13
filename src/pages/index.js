@@ -5,6 +5,7 @@ import Bienvenida from "../components/bienvenida/bienvenida"
 import { Col } from "reactstrap"
 import Titulo from "../components/titulo/titulo"
 import HorarioContainer from "../components/horarioDeBuses/horarioContainer"
+import Noticias from "../components/noticias/noticiasIndex"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -12,6 +13,7 @@ const IndexPage = ({ data }) => (
     <Bienvenida />
     <Col className="mx-auto" xl="10" lg="10" md="11" sm="12" xs="12">
       <Titulo Color="#9AC42F" Text="Noticias y Eventos" />
+      <Noticias noticias={data.allStrapiNoticia.nodes} />
       <Titulo Color="#9AC42F" Text="Horario De Buses" />
       <HorarioContainer routes={data.allStrapiRutabuses.edges} />
     </Col>
@@ -29,6 +31,16 @@ export const MainPageQuery = graphql`
           nombreRuta
           infoExtra
           strapiId
+        }
+      }
+    }
+
+    allStrapiNoticia {
+      nodes {
+        titulo
+        descripcion
+        imagenes {
+          url
         }
       }
     }
