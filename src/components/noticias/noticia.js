@@ -1,13 +1,14 @@
 import React from "react"
+import { Link } from "gatsby"
 import ImageGroup from "../imagenes/group/imageGroup"
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
 import InfoPrincipalNoticia from "./infoPrincipalNoticia"
 import DescripcionNoticia from "./descripcionNoticia"
-import { Col, Row } from "reactstrap"
+import { Col, Row, Button } from "reactstrap"
+
 import close from "../../images/Icons/cross.png"
 
 const Noticia = ({ selected, onClick, next, prev, index }) => {
-  console.log(selected.autor)
   return (
     <>
       <Row
@@ -102,6 +103,24 @@ const Noticia = ({ selected, onClick, next, prev, index }) => {
             )}
 
             <DescripcionNoticia descipcion={selected.descripcion} />
+
+            {index !== false ? (
+              <div
+                style={{
+                  whiteSpace: "pre-line",
+                  marginLeft: "1rem",
+                  marginBottom: "1rem",
+                }}
+              >
+                <Link to={selected.id}>
+                  <Button variant="secondary" size="sm">
+                    Leer más{" "}
+                  </Button>
+                </Link>
+              </div>
+            ) : (
+              <></>
+            )}
           </Col>
         </Col>
         <Col

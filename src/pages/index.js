@@ -40,6 +40,7 @@ export const MainPageQuery = graphql`
 
     allStrapiNoticia(sort: { fields: fecha, order: DESC }, limit: 5) {
       nodes {
+        id
         fecha
         titulo
         descripcion
@@ -53,6 +54,7 @@ export const MainPageQuery = graphql`
 
     allStrapiEvento(sort: { fields: fecha, order: DESC }, limit: 5) {
       nodes {
+        id
         fecha
         titulo
         descripcion
