@@ -9,7 +9,7 @@ import Noticias from "../components/noticias/noticiasIndex"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Feitec" />
+    <SEO title="Inicio" />
     <Bienvenida />
     <Col className="mx-auto" xl="10" lg="10" md="11" sm="12" xs="12">
       <Titulo Color="#9AC42F" Text="Noticias y Eventos" />

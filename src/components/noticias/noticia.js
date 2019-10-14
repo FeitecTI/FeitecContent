@@ -4,7 +4,8 @@ import ImageGroup from "../imagenes/group/imageGroup"
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
 import InfoPrincipalNoticia from "./infoPrincipalNoticia"
 import DescripcionNoticia from "./descripcionNoticia"
-import { Col, Row, Button } from "reactstrap"
+import { Col, Row, Button, Media } from "reactstrap"
+import Styles from "./noticiaIndex.module.css"
 
 import close from "../../images/Icons/cross.png"
 
@@ -57,7 +58,7 @@ const Noticia = ({ selected, onClick, next, prev, index }) => {
             {index == false ? (
               <ImageGroup images={selected.imagenes} />
             ) : (
-              <ImageGroup images={[selected.imagenes[0]]} />
+              <Media src={selected.imagenes[0].url} className={Styles.image} />
             )}
           </Col>
           <Col
@@ -99,7 +100,14 @@ const Noticia = ({ selected, onClick, next, prev, index }) => {
                 autor={selected.tag}
               />
             )}
-            <DescripcionNoticia descipcion={selected.descripcion} />
+
+            {index !== false ? (
+              <DescripcionNoticia
+                descipcion={selected.descripcion.substr(0, 480) + "..."}
+              />
+            ) : (
+              <DescripcionNoticia descipcion={selected.descripcion} />
+            )}
             {index !== false ? (
               <div
                 style={{

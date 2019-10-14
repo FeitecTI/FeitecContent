@@ -7,15 +7,16 @@ import DescripcionNoticia from "../noticias/descripcionNoticia"
 import { Col, Row } from "reactstrap"
 import close from "../../images/Icons/cross.png"
 import Titulo from "../titulo/titulo"
+import SEO from "../seo"
 
 const NoticiasNode = ({ data }) => {
   console.log({ data })
   return (
     <Layout>
+      <SEO title="Noticia" />
       <Col className="mx-auto" xl="10" lg="10" md="11" sm="12" xs="12">
         <Titulo Color="#9AC42F" Text="Noticia" />
       </Col>
-
       <Row
         className="mx-auto"
         style={{
@@ -40,55 +41,56 @@ const NoticiasNode = ({ data }) => {
           xl="10"
           style={{
             padding: 0,
-            display: "flex",
             boxShadow: "-1rem 1rem 0.5rem rgba(0, 0, 0, 0.18)",
             borderRadius: "0.5rem",
             backgroundColor: "#F5F5F5",
           }}
         >
-          <Col
-            xs="5"
-            sm="5"
-            md="5"
-            lg="5"
-            xl="5"
-            style={{ borderRadius: "0.5rem 0 0 0.5rem" }}
-            className="my-auto"
-          >
-            <ImageGroup images={data.strapiNoticia.imagenes} />
-          </Col>
-          <Col
-            xs="7"
-            sm="7"
-            md="7"
-            lg="7"
-            xl="7"
-            style={{
-              backgroundColor: "#F5F5F5",
-              borderRadius: "0 0.5rem 0.5rem 0",
-            }}
-          >
-            <Link to="/">
-              <img
-                src={close}
-                alt="Cerrar Noticia"
-                style={{
-                  marginTop: "1rem",
-                  marginRight: "1rem",
-                  height: "1rem",
-                  float: "right",
-                }}
+          <Row>
+            <Col
+              xs="12"
+              sm="12"
+              md="5"
+              lg="5"
+              xl="5"
+              style={{ borderRadius: "0.5rem 0 0 0.5rem" }}
+              className="my-auto"
+            >
+              <ImageGroup images={data.strapiNoticia.imagenes} />
+            </Col>
+            <Col
+              xs="12"
+              sm="12"
+              md="7"
+              lg="7"
+              xl="7"
+              style={{
+                backgroundColor: "#F5F5F5",
+                borderRadius: "0 0.5rem 0.5rem 0",
+              }}
+            >
+              <Link to="/">
+                {" "}
+                <img
+                  src={close}
+                  alt="Cerrar Noticia"
+                  style={{
+                    marginTop: "1rem",
+                    marginRight: "1rem",
+                    height: "1rem",
+                    float: "right",
+                  }}
+                />
+              </Link>
+              <InfoPrincipalNoticia
+                titulo={data.strapiNoticia.titulo}
+                fecha={data.strapiNoticia.fecha}
+                autor={data.strapiNoticia.autor}
               />
-            </Link>
 
-            <InfoPrincipalNoticia
-              titulo={data.strapiNoticia.titulo}
-              fecha={data.strapiNoticia.fecha}
-              autor={data.strapiNoticia.autor}
-            />
-
-            <DescripcionNoticia descipcion={data.strapiNoticia.descripcion} />
-          </Col>
+              <DescripcionNoticia descipcion={data.strapiNoticia.descripcion} />
+            </Col>
+          </Row>
         </Col>
         <Col
           xs="1"
