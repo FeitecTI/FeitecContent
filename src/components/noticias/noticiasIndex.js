@@ -10,7 +10,7 @@ class NoticiasIndex extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      noticias: this.props.noticias,
+      noticias: this.props.noticias.concat(this.props.eventos),
       start: 0,
       limit: 6,
       selected: 0,

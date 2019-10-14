@@ -13,7 +13,10 @@ const IndexPage = ({ data }) => (
     <Bienvenida />
     <Col className="mx-auto" xl="10" lg="10" md="11" sm="12" xs="12">
       <Titulo Color="#9AC42F" Text="Noticias y Eventos" />
-      <Noticias noticias={data.allStrapiNoticia.nodes} />
+      <Noticias
+        noticias={data.allStrapiNoticia.nodes}
+        eventos={data.allStrapiEvento.nodes}
+      />
       <Titulo Color="#9AC42F" Text="Horario De Buses" />
       <HorarioContainer routes={data.allStrapiRutabuses.edges} />
     </Col>
@@ -35,11 +38,27 @@ export const MainPageQuery = graphql`
       }
     }
 
-    allStrapiNoticia {
+    allStrapiNoticia(sort: { fields: fecha, order: DESC }, limit: 5) {
       nodes {
+        fecha
         titulo
         descripcion
+        autor
         imagenes {
+          id
+          url
+        }
+      }
+    }
+
+    allStrapiEvento(sort: { fields: fecha, order: DESC }, limit: 5) {
+      nodes {
+        fecha
+        titulo
+        descripcion
+        tag
+        imagenes {
+          id
           url
         }
       }

@@ -7,6 +7,7 @@ import { Col, Row } from "reactstrap"
 import close from "../../images/Icons/cross.png"
 
 const Noticia = ({ selected, onClick, next, prev, index }) => {
+  console.log(selected.autor)
   return (
     <>
       <Row
@@ -45,22 +46,26 @@ const Noticia = ({ selected, onClick, next, prev, index }) => {
           }}
         >
           <Col
-            xs="4"
-            sm="4"
-            md="4"
-            lg="4"
-            xl="4"
+            xs="5"
+            sm="5"
+            md="5"
+            lg="5"
+            xl="5"
             style={{ borderRadius: "0.5rem 0 0 0.5rem" }}
             className="my-auto"
           >
-            <ImageGroup images={selected.imagenes} />
+            {index == false ? (
+              <ImageGroup images={selected.imagenes} />
+            ) : (
+              <ImageGroup images={[selected.imagenes[0]]} />
+            )}
           </Col>
           <Col
-            xs="8"
-            sm="8"
-            md="8"
-            lg="8"
-            xl="8"
+            xs="7"
+            sm="7"
+            md="7"
+            lg="7"
+            xl="7"
             style={{
               backgroundColor: "#F5F5F5",
               borderRadius: "0 0.5rem 0.5rem 0",
@@ -82,11 +87,20 @@ const Noticia = ({ selected, onClick, next, prev, index }) => {
               <></>
             )}
 
-            <InfoPrincipalNoticia
-              titulo={selected.titulo}
-              fecha={selected.fecha}
-              autor={selected.autor}
-            />
+            {selected.autor !== undefined ? (
+              <InfoPrincipalNoticia
+                titulo={selected.titulo}
+                fecha={selected.fecha}
+                autor={selected.autor}
+              />
+            ) : (
+              <InfoPrincipalNoticia
+                titulo={selected.titulo}
+                fecha={selected.fecha}
+                autor={selected.tag}
+              />
+            )}
+
             <DescripcionNoticia descipcion={selected.descripcion} />
           </Col>
         </Col>
