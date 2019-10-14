@@ -13,10 +13,14 @@ const IndexPage = ({ data }) => (
     <Bienvenida />
     <Col className="mx-auto" xl="10" lg="10" md="11" sm="12" xs="12">
       <Titulo Color="#9AC42F" Text="Noticias y Eventos" />
+    </Col>
+    <Col className="mx-auto" xl="12" lg="12" md="12" sm="12" xs="12">
       <Noticias
         noticias={data.allStrapiNoticia.nodes}
         eventos={data.allStrapiEvento.nodes}
       />
+    </Col>
+    <Col className="mx-auto" xl="10" lg="10" md="11" sm="12" xs="12">
       <Titulo Color="#9AC42F" Text="Horario De Buses" />
       <HorarioContainer routes={data.allStrapiRutabuses.edges} />
     </Col>

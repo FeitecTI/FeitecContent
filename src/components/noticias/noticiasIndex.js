@@ -46,7 +46,7 @@ class NoticiasIndex extends React.Component {
   render() {
     console.log(this.state.noticias)
     return (
-      <Col className="mx-auto" xl="10" lg="10" md="11" sm="11" xs="11">
+      <Col className="mx-auto" xl="12" lg="12" md="12" sm="12" xs="12">
         <Noticia
           selected={this.state.noticias[this.state.selected]}
           next={this.next}
