@@ -17,6 +17,7 @@ class Noticias extends React.Component {
       start: 0,
       limit: 6,
       selected: -1,
+      index: 0,
     }
     this.goBack = this.goBack.bind(this)
     this.selectItem = this.selectItem.bind(this)
@@ -64,6 +65,7 @@ class Noticias extends React.Component {
               next={this.next}
               prev={this.prev}
               onClick={this.goBack}
+              index={false}
             />
           ) : (
             <ListaNoticias
