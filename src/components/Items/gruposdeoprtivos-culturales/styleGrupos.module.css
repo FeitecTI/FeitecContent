@@ -12,6 +12,8 @@
 
 .imagen {
   margin-bottom: 0;
+  height: 240px;
+  width: 500px;
 }
 
 .wrapper {

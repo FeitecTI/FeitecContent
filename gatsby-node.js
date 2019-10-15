@@ -65,6 +65,20 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      allStrapiNoticia {
+        edges {
+          node {
+            id
+          }
+        }
+      }
+      allStrapiEvento {
+        edges {
+          node {
+            id
+          }
+        }
+      }
     }
     `
   ).then(result => {
@@ -122,6 +136,26 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
+    // Create pages for each Notice
+    result.data.allStrapiNoticia.edges.forEach(({ node }) => {
+      createPage({
+        path: `/${node.id}`,
+        component: path.resolve(`src/components/noticias/noticiasNode.js`),
+        context: {
+          id: node.id,
+        },
+      })
+    })
+    // Create pages for each Event
+    result.data.allStrapiEvento.edges.forEach(({ node }) => {
+      createPage({
+        path: `/${node.id}`,
+        component: path.resolve(`src/components/evento/eventoNode.js`),
+        context: {
+          id: node.id,
+        },
+      })
+    })
   })
   // Query for articles nodes to use in creating pages.
   return getAsociaciones

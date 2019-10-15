@@ -40,6 +40,7 @@ class HorarioContainer extends React.Component {
               paddingLeft: "2rem",
               color: "#000",
               fontWeight: "bold",
+              border: 0,
             }}
           >
             {this.state.routes[this.state.selected].node.nombreRuta}
